@@ -1,0 +1,50 @@
+src/
+├── App.tsx                           # Componente principal
+├── main.tsx                          # Entry point
+├── index.css                         # Estilos globais
+│
+├── pages/                            # Páginas
+│   └── LoginPage/
+│       └── index.tsx                 # Página de login (GoogleScreen)
+│
+├── features/                         # Features (Duck Pattern)
+│   ├── auth/                         # Feature de autenticação
+│   │   ├── components/
+│   │   │   ├── GoogleLoginButton.tsx
+│   │   │   ├── OngSysLoginButton.tsx
+│   │   │   ├── OngSysLoginForm.tsx
+│   │   │   └── LoginStatusIndicator.tsx  # NOVO - Status dos logins
+│   │   ├── hooks/
+│   │   │   └── useAuth.ts            # Hook customizado de autenticação
+│   │   ├── services/
+│   │   │   ├── googleAuth.service.ts
+│   │   │   └── ongSysAuth.service.ts
+│   │   ├── types/
+│   │   │   └── auth.types.ts         # Interfaces e tipos
+│   │   └── utils/
+│   │       └── validators.ts         # Validações de formulário
+│   │
+│   └── modal/                        # Feature de Modal
+│       ├── components/
+│       │   └── Modal.tsx
+│       └── hooks/
+│           └── useModal.ts
+│
+├── shared/                           # Código compartilhado
+│   ├── components/                   # Componentes genéricos
+│   │   ├── Button/
+│   │   │   └── index.tsx
+│   │   ├── Input/
+│   │   │   └── index.tsx
+│   │   └── LoadingSpinner/
+│   │       └── index.tsx
+│   ├── constants/
+│   │   └── messages.ts               # Mensagens de toast
+│   ├── utils/
+│   │   ├── toast.ts                  # Configurações de toast
+│   │   └── http.ts                   # Configuração axios
+│   └── types/
+│       └── common.types.ts
+│
+└── config/                           # Configurações
+    └── api.config.ts                 # URLs da API
